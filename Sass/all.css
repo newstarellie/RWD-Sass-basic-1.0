@@ -133,6 +133,73 @@ table {
   border-spacing: 0;
 }
 
+header {
+  background-color: #b2998e;
+  margin-bottom: 2rem;
+}
+
+header .container h1 a {
+  background-image: url("https://cdn-icons-png.flaticon.com/512/7041/7041416.png");
+  display: block;
+  width: 50px;
+  height: 50px;
+  text-indent: -1000px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+header .container nav ul a {
+  display: block;
+  padding: 0.5rem;
+  background-color: #e1e0e7;
+  border: #e1e0e7 solid 1px;
+  border-radius: 5%;
+  text-decoration: none;
+  color: #854e4b;
+  text-align: center;
+  font-weight: bold;
+}
+
+header .container nav ul a:hover {
+  background-color: #dcc6c6;
+}
+
+.container article h2 {
+  font-size: 2rem;
+}
+
+.container aside {
+  width: 50%;
+}
+
+@media (min-width: 768px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .container article {
+    width: 75%;
+  }
+  .container aside {
+    width: 20%;
+  }
+}
+
+footer {
+  background-color: #b2998e;
+  margin-top: 2rem;
+}
+
 *,
 *::before,
 *::after {
@@ -332,72 +399,5 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-header {
-  background-color: #b2998e;
-  margin-bottom: 2rem;
-}
-
-header .container h1 a {
-  background-image: url("https://cdn-icons-png.flaticon.com/512/7041/7041416.png");
-  display: block;
-  width: 50px;
-  height: 50px;
-  text-indent: -1000px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  text-indent: 101%;
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-header .container nav ul a {
-  display: block;
-  padding: 0.5rem;
-  background-color: #e1e0e7;
-  border: #e1e0e7 solid 1px;
-  border-radius: 5%;
-  text-decoration: none;
-  color: #854e4b;
-  text-align: center;
-  font-weight: bold;
-}
-
-header .container nav ul a:hover {
-  background-color: #dcc6c6;
-}
-
-.container article h2 {
-  font-size: 2rem;
-}
-
-.container aside {
-  width: 50%;
-}
-
-@media (min-width: 768px) {
-  .container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-  }
-  .container article {
-    width: 75%;
-  }
-  .container aside {
-    width: 20%;
-  }
-}
-
-footer {
-  background-color: #b2998e;
-  margin-top: 2rem;
 }
 /*# sourceMappingURL=all.css.map */
