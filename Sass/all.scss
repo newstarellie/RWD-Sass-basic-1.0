@@ -1,0 +1,45 @@
+@import "_reset";
+@import "variable";
+@import "mixin";
+@import "main";
+@import "base";
+
+header {
+  background-color: $theme-color-main;
+  margin-bottom: $margin-xl;
+  .container {
+    @include logo-img($logo-img, 50px, 50px);
+
+    nav {
+      ul {
+        a {
+          @include btn;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  article {
+    h2 {
+      font-size: $font-lg;
+    }
+  }
+  aside {
+    width: 50%;
+  }
+  @include pad {
+    @include flex-row(space-between, start);
+    article {
+      width: 75%;
+    }
+    aside {
+      width: 20%;
+    }
+  }
+}
+footer {
+  background-color: $theme-color-main;
+  margin-top: $margin-xl;
+}

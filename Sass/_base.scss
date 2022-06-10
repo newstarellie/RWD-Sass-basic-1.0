@@ -1,0 +1,42 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+.clear-fix {
+  clear: both;
+}
+img {
+  width: 100%;
+  height: auto;
+}
+a {
+  text-decoration: none;
+}
+p {
+  margin: 0.5rem 0;
+  line-height: $line-height;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+body {
+  background-color: $theme-color-background;
+}
+
+$direction-types: center, start, end, space-between, space-around, space-evenly;
+@each $type in $direction-types {
+  .flex-row-#{$type} {
+    display: flex;
+    justify-content: $type;
+    align-items: center;
+  }
+  .flex-column-#{$type} {
+    display: flex;
+    flex-direction: column;
+    justify-content: $type;
+    align-items: center;
+  }
+}

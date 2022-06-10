@@ -1,0 +1,61 @@
+@mixin mobile {
+  @media (min-width: 340px) {
+    @content;
+  }
+}
+@mixin pad {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin screen {
+  @media (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin btn {
+  display: block;
+  padding: 0.5rem;
+  background-color: $btn-background-color;
+  border: $btn-background-color solid 1px;
+  border-radius: 5%;
+  text-decoration: none;
+  color: $text-color;
+  text-align: center;
+  font-weight: bold;
+
+  &:hover {
+    background-color: $btn-hover-color;
+  }
+}
+
+@mixin flex-row($justify-content, $align-items) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+@mixin flex-column($justify-content, $align-items) {
+  display: flex;
+  flex-direction: column;
+  justify-content: $justify-content;
+  align-items: $align-items;
+}
+
+//logo
+@mixin logo-img($logo-img, $width, $hight) {
+  h1 {
+    a {
+      background-image: url($logo-img);
+      display: block;
+      width: $width;
+      height: $hight;
+      text-indent: -1000px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      text-indent: 101%;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+  }
+}
