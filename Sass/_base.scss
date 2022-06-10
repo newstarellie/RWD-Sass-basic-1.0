@@ -6,6 +6,10 @@
 .clear-fix {
   clear: both;
 }
+body {
+  background-color: $theme-color-background;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -22,22 +26,4 @@ p {
   max-width: 960px;
   margin: 0 auto;
   padding: 0.5rem 1rem;
-}
-body {
-  background-color: $theme-color-background;
-}
-
-$direction-types: center, start, end, space-between, space-around, space-evenly;
-@each $type in $direction-types {
-  .flex-row-#{$type} {
-    display: flex;
-    justify-content: $type;
-    align-items: center;
-  }
-  .flex-column-#{$type} {
-    display: flex;
-    flex-direction: column;
-    justify-content: $type;
-    align-items: center;
-  }
 }

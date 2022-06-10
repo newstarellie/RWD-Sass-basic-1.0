@@ -1,20 +1,21 @@
+//media
 @mixin mobile {
-  @media (min-width: 340px) {
+  @media (min-width: $mobile-size) {
     @content;
   }
 }
 @mixin pad {
-  @media (min-width: 768px) {
+  @media (min-width: $pad-size) {
     @content;
   }
 }
 @mixin screen {
-  @media (min-width: 992px) {
+  @media (min-width: $screen-size) {
     @content;
   }
 }
-
-@mixin btn {
+//<a>btn
+@mixin a-link-btn {
   display: block;
   padding: 0.5rem;
   background-color: $btn-background-color;
@@ -30,6 +31,22 @@
   }
 }
 
+//logo with img
+@mixin a-link-img($logo-img, $width, $hight) {
+  a {
+    background-image: url($logo-img);
+    display: block;
+    width: $width;
+    height: $hight;
+    text-indent: -1000px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: 101%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+//flex
 @mixin flex-row($justify-content, $align-items) {
   display: flex;
   justify-content: $justify-content;
@@ -41,21 +58,18 @@
   justify-content: $justify-content;
   align-items: $align-items;
 }
-
-//logo
-@mixin logo-img($logo-img, $width, $hight) {
-  h1 {
-    a {
-      background-image: url($logo-img);
-      display: block;
-      width: $width;
-      height: $hight;
-      text-indent: -1000px;
-      background-size: contain;
-      background-repeat: no-repeat;
-      text-indent: 101%;
-      overflow: hidden;
-      white-space: nowrap;
-    }
+//flex class
+$direction-types: center, start, end, space-between, space-around, space-evenly;
+@each $type in $direction-types {
+  .flex-row-#{$type} {
+    display: flex;
+    justify-content: $type;
+    align-items: center;
+  }
+  .flex-column-#{$type} {
+    display: flex;
+    flex-direction: column;
+    justify-content: $type;
+    align-items: center;
   }
 }

@@ -2,12 +2,14 @@ header {
   background-color: $theme-color-main;
   margin-bottom: $margin-xl;
   .container {
-    @include logo-img($logo-img, 50px, 50px);
+    h1 {
+      @include a-link-img($logo-img, 50px, 50px);
+    }
 
     nav {
       ul {
         a {
-          @include btn;
+          @include a-link-btn;
         }
       }
     }
